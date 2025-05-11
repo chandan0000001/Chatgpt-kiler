@@ -1,6 +1,6 @@
+import Script from "next/script";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script"; // ✅ Add this import
 import "./globals.css";
 
 const geistSans = Geist({
@@ -26,12 +26,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* ✅ Adsterra Ad Script */}
-        <Script
-          src="//pl26613785.profitableratecpm.com/7d/14/1b/7d141be035bdd8e24dca6dc2a619b5d7.js"
-          strategy="afterInteractive"
-        />
         
+        {/* Adsterra Script 1 */}
+        <Script
+          strategy="afterInteractive"
+          src="//pl26613785.profitableratecpm.com/7d/14/1b/7d141be035bdd8e24dca6dc2a619b5d7.js"
+        />
+
+        {/* Adsterra Script 2 */}
+        <Script
+          strategy="afterInteractive"
+          src="//inmateimpossibility.com/7d/14/1b/7d141be035bdd8e24dca6dc2a619b5d7.js"
+        />
+
         {children}
       </body>
     </html>
